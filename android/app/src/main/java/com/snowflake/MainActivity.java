@@ -1,6 +1,7 @@
 package com.snowflake;
 
 import android.app.Activity;
+import com.AirMaps.AirPackage;
 import android.os.Bundle;
 import android.view.KeyEvent;
 
@@ -31,6 +32,7 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
                 .setBundleAssetName("index.android.bundle")
                 .setJSMainModuleName("index.android")
                 .addPackage(new MainReactPackage())
+                .addPackage(new AirPackage())
 
                 // and this line:
                 .addPackage(new VectorIconsPackage())

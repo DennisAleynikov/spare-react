@@ -28,6 +28,7 @@
 		6BA0823C40D445BD95A77B35 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C242FF35B5E4FE1904E8662 /* Foundation.ttf */; };
 		71EE6F4798B3499F95F4734A /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7516973699F94D068012C624 /* MaterialIcons.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		8927048914C64150A884E3FD /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAFCBAE13D64F8887FFAF51 /* libAirMaps.a */; };
 		9F95B1C2EE01493CBDC65BDD /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA02F8732E8D4D65814DE598 /* EvilIcons.ttf */; };
 		CF44B65AD8AF4DECAA416837 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B366F5CFCE574183B64101B9 /* libRNVectorIcons.a */; };
 		DC2F088486794A8FA7A7778C /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1726289E4A541C0870E37B6 /* libRCTActionSheet.a */; };
@@ -115,6 +116,13 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
+		955D29A51C587D47009A72EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5892E43C43D14D82923A413E /* AirMaps.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 11FA5C511C4A1296003AC2EE;
+			remoteInfo = AirMaps;
+		};
 		95EF61191C4601F30023C0D3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D1CE6D4342AC464597B39672 /* RNQuickAction.xcodeproj */;
@@ -174,6 +182,7 @@
 		4ACFD96BC9AC4373BFF6CF4F /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 0; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		54BABB9478984AB7892E935B /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 0; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		57674658C1E24693BA04F241 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 0; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
+		5892E43C43D14D82923A413E /* AirMaps.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 0; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AirMaps.xcodeproj; path = "../node_modules/react-native-maps/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; };
 		64F998007403454884427ED1 /* libRNQuickAction.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 0; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNQuickAction.a; sourceTree = "<group>"; };
 		7516973699F94D068012C624 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 0; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -183,6 +192,7 @@
 		B366F5CFCE574183B64101B9 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 0; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 		D1CE6D4342AC464597B39672 /* RNQuickAction.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 0; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNQuickAction.xcodeproj; path = "../node_modules/react-native-quick-actions/RNQuickAction/RNQuickAction.xcodeproj"; sourceTree = "<group>"; };
 		E1726289E4A541C0870E37B6 /* libRCTActionSheet.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 0; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTActionSheet.a; sourceTree = "<group>"; };
+		FDAFCBAE13D64F8887FFAF51 /* libAirMaps.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 0; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAirMaps.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +220,7 @@
 				0FDDFE798CD846A78FA4212F /* libRNQuickAction.a in Frameworks */,
 				DC2F088486794A8FA7A7778C /* libRCTActionSheet.a in Frameworks */,
 				CF44B65AD8AF4DECAA416837 /* libRNVectorIcons.a in Frameworks */,
+				8927048914C64150A884E3FD /* libAirMaps.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +361,7 @@
 				D1CE6D4342AC464597B39672 /* RNQuickAction.xcodeproj */,
 				0D959C690FAF43C980633508 /* swiper.xcodeproj */,
 				57674658C1E24693BA04F241 /* RNVectorIcons.xcodeproj */,
+				5892E43C43D14D82923A413E /* AirMaps.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -382,6 +394,14 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* spare.app */,
 				00E356EE1AD99517003FC87E /* spare.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		955D29A21C587D47009A72EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				955D29A61C587D47009A72EB /* libAirMaps.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -480,6 +500,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 955D29A21C587D47009A72EB /* Products */;
+					ProjectRef = 5892E43C43D14D82923A413E /* AirMaps.xcodeproj */;
+				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
@@ -610,6 +634,13 @@
 			fileType = archive.ar;
 			path = libRCTText.a;
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		955D29A61C587D47009A72EB /* libAirMaps.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAirMaps.a;
+			remoteRef = 955D29A51C587D47009A72EB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		95EF611A1C4601F30023C0D3 /* libRNQuickAction.a */ = {
@@ -749,6 +780,7 @@
 					"\"$(SRCROOT)/spare\"",
 					"\"$(SRCROOT)/spare\"",
 					"\"$(SRCROOT)/spare\"",
+					"\"$(SRCROOT)/spare\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = spare;
@@ -770,6 +802,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/spare\"",
 					"\"$(SRCROOT)/spare\"",
 					"\"$(SRCROOT)/spare\"",
 					"\"$(SRCROOT)/spare\"",
@@ -795,12 +828,14 @@
 					"$(SRCROOT)/../node_modules/react-native-quick-actions/RNQuickAction/RNQuickAction",
 					"$(SRCROOT)/../node_modules/react-native-swiper/examples.old/iOS",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-maps/ios/AirMaps/**",
 				);
 				INFOPLIST_FILE = spare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/spare\"",
 					"\"$(SRCROOT)/spare\"",
 					"\"$(SRCROOT)/spare\"",
 					"\"$(SRCROOT)/spare\"",
@@ -828,12 +863,14 @@
 					"$(SRCROOT)/../node_modules/react-native-quick-actions/RNQuickAction/RNQuickAction",
 					"$(SRCROOT)/../node_modules/react-native-swiper/examples.old/iOS",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-maps/ios/AirMaps/**",
 				);
 				INFOPLIST_FILE = spare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/spare\"",
 					"\"$(SRCROOT)/spare\"",
 					"\"$(SRCROOT)/spare\"",
 					"\"$(SRCROOT)/spare\"",
@@ -890,6 +927,7 @@
 					"$(SRCROOT)/../node_modules/react-native-quick-actions/RNQuickAction/RNQuickAction",
 					"$(SRCROOT)/../node_modules/react-native-swiper/examples.old/iOS",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-maps/ios/AirMaps/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -935,6 +973,7 @@
 					"$(SRCROOT)/../node_modules/react-native-quick-actions/RNQuickAction/RNQuickAction",
 					"$(SRCROOT)/../node_modules/react-native-swiper/examples.old/iOS",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-maps/ios/AirMaps/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;

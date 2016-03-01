@@ -11,6 +11,7 @@ import React, { AppRegistry } from 'react-native';
 import { Provider } from 'react-redux/native';
 import Parse from 'parse/react-native';
 import ParseReact from 'parse-react/react-native';
+import MapView from 'react-native-maps';
 import App from './containers/App';
 import configureStore from './lib/configureStore';
 
