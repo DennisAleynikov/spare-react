@@ -32,7 +32,7 @@ const item = (state, action) => {
 
      case ‘TOGGLE_ITEM’:
         return state.map(item =>
-                if (todo.id !== action.id) {
+                if (item.id !== action.id) {
                   return item
                 }
                  return Object.assign({},
