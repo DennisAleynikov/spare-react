@@ -7,20 +7,12 @@
 /**
  * ## Imports
  *
- * The actions for splash screen
+ * The actions for items
  */
 const {
   ADD_ITEM,
   SET_VISIBILITY_FILTER,
-  TOGGLE_ITEM,
-
-  SPLASH_WANT_REQUEST,
-  SPLASH_WANT_SUCCESS,
-  SPLASH_WANT_FAILURE,
-
-  SPLASH_GIVE_REQUEST,
-  SPLASH_GIVE_SUCCESS,
-  SPLASH_GIVE_FAILURE
+  TOGGLE_ITEM
 } = require('../../lib/constants').default;
 
 /**
@@ -31,7 +23,7 @@ const BackendFactory = require('../../lib/BackendFactory').default;
 const AppAuthToken = require('../../lib/AppAuthToken').default;
 
 
-//1. Takes the text from AddTodo field and returns proper “Action” JSON to send to other components.
+//1. Takes the text from AddItem field and returns proper “Action” JSON to send to other components.
 export const addItem = (text) => {
  return {
  type: ‘ADD_ITEM’,
@@ -49,8 +41,8 @@ export const setVisibilityFilter = (filter) => {
  }
 }
 
-//3. Takes Todo item’s id and returns proper “Action” JSON object to send to other components.
-export const toggleTodo = (id) => {
+//3. Takes Item’s id and returns proper “Action” JSON object to send to other components.
+export const toggleItem = (id) => {
  return {
  type: ‘TOGGLE_ITEM’,
  id

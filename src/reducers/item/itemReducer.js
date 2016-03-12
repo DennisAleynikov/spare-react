@@ -31,12 +31,12 @@ const item = (state, action) => {
               completed:false}]
 
      case ‘TOGGLE_ITEM’:
-        return state.map(todo =>
+        return state.map(item =>
                 if (todo.id !== action.id) {
-                  return todo
+                  return item
                 }
                  return Object.assign({},
-                    todo, {completed: !todo.completed})
+                    item, {completed: !item.completed})
             )
 
       case ‘SET_VISIBILITY_FILTER’: {
