@@ -146,7 +146,7 @@ let App = React.createClass({
       />
     </View>
     return (
-      mapview
+      component
     );
   }
 });

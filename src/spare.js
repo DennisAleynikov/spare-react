@@ -9,9 +9,6 @@
  */
 import React, { AppRegistry } from 'react-native';
 import { Provider } from 'react-redux/native';
-import Parse from 'parse/react-native';
-import ParseReact from 'parse-react/react-native';
-import MapView from 'react-native-maps';
 import App from './containers/App';
 import configureStore from './lib/configureStore';
 
@@ -70,7 +67,6 @@ export default function native(platform) {
       store.dispatch(setPlatform(platform));
       store.dispatch(setVersion(VERSION));
       store.dispatch(setStore(store));
-      Parse.initialize("zDED0Ntp6IF6KLtKASLfO3QjEx0FHEItF1HrhRav", "rCeataxcmNJ5CYIYzFDvmcCl46j6MW9jZaMFWoNf");
       /**
        * Provider wrap the ```App``` with a ```Provider``` and both
        * have a ```store```
