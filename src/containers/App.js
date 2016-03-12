@@ -1,132 +1,38 @@
-/**
- * # app.js
- *  **Note** a lot of this is boilerplate which is also in Login &
- *  Profile
-*
- *  After setting up the Redux actions, props and dispatch, this
- * class ```renders``` either the ```Login``` or ```Tabbar```
- */
-'use strict';
-/*
- * ## Imports
- *
- * Imports from redux
- */
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux/native';
+import { connect } from 'react-redux'
+import { toggleItem } from '../actions'
+import ItemFeed from '../components/ItemFeed'
 
-import data from "../data";
-
-/**
- * Immutable Map
- */
-import {Map} from 'immutable';
-
-/**
- * Project imports
- */
-// const Login = require('./Login').default;
-// const Splash = require('../containers/Splash').default;
-const Tabbar = require('../components/Tabbar').default;
-
-/**
- * Project actions
- */
-import * as authActions from '../reducers/auth/authActions';
-import * as deviceActions from '../reducers/device/deviceActions';
-import * as globalActions from '../reducers/global/globalActions';
-
-/**
- * We only need React
- */
-import React,
-{
-  View,
-  StyleSheet
-}
-from 'react-native';
-
-/**
- * We only have one state to worry about
- */
-
-const {
-  LOGIN_STATE_LOGOUT
-} = require('../lib/constants').default;
-
-var styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 80
+const getVisibleItems = (items, filter) => {
+  switch (filter) {
+    case 'SHOW_ALL':
+      return items
+    case 'SHOW_COMPLETED':
+      return items.filter(t => t.completed)
+    case 'SHOW_ACTIVE':
+      return items.filter(t => !t.completed)
   }
-});
-
-/**
- * ## Actions
- * 3 of our actions will be available as ```actions```
- */
-const actions = [
-  authActions,
-  deviceActions,
-  globalActions
-];
-
-/**
- *  Save that state
- */
-function mapStateToProps(state) {
-  return {
-      ...state
-  };
-};
-
-/*
- * Bind all the functions from the ```actions``` and bind them with
- * ```dispatch```
-
- */
-function mapDispatchToProps(dispatch) {
-
-  const creators = Map()
-          .merge(...actions)
-          .filter(value => typeof value === 'function')
-          .toObject();
-
-  return {
-    actions: bindActionCreators(creators, dispatch),
-    dispatch
-  };
 }
-/**
- * ## App class
- */
-let App = React.createClass({
-  /**
-   * The initial state will be logged out
-   */
-  getInitialState() {
-    return {
-      firstRun: true
-    };
-  },
-  /**
-   * Change the state to logged in if the Auth form is in the state of
-   * ```LOGIN_STATE_LOGOUT```.  This  state will be set after a
-   * successful Registrations or Login
-   */
-  componentWillReceiveProps(props) {
-    var firstRun =  props.auth.form.state === LOGIN_STATE_LOGOUT;
-    this.setState({
-      firstRun: firstRun
-    });
-  },
-  /**
-   * See if there's a sessionToken from a previous login, if so, then
-   * the state will be changed to ```LOGIN_STATE_LOGOUT```
-   */
-  componentDidMount() {
-    this.props.actions.getSessionToken();
-  },
+
+const mapStateToProps = (state) => {
+  return {
+    items: getVisibleItems(state.items, state.visibilityFilter)
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onItemClick: (id) => {
+      dispatch(toggleItem(id))
+    }
+  }
+}
+
+const VisibleItemFeed = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ItemFeed)
+
+export default VisibleItemFeed
   /**
    * Display the ```Tabbar``` if we're logged in
    */
