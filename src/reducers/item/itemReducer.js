@@ -19,18 +19,18 @@ const formValidation = require('./profileFormValidation').default;
  *
  */
 const {
-  ADD_TODO,
-  TOGGLE_TODO,
+  ADD_ITEM,
+  TOGGLE_ITEM,
   SET_VISIBILITY_FILTER
 } = require('../../lib/constants').default;
 
 const item = (state, action) => {
   switch (action.type) {
-     case ‘ADD_TODO’:
+     case ‘ADD_ITEM’:
       return […state,{id: action.id, text: action.text,
               completed:false}]
 
-     case ‘TOGGLE_TODO’:
+     case ‘TOGGLE_ITEM’:
         return state.map(todo =>
                 if (todo.id !== action.id) {
                   return todo
