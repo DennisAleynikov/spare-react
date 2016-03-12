@@ -35,7 +35,6 @@ const VisibleItemFeed = connect(
 export default VisibleItemFeed
   /**
    * Display the ```Tabbar``` if we're logged in
-   */
   render () {
     let component = <View style={styles.container}>
       <Tabbar />
@@ -45,7 +44,8 @@ export default VisibleItemFeed
     );
   }
 });
-/**
+
  * Connect the properties
- */
+
 export default connect(mapStateToProps, mapDispatchToProps)(App);
+*/
