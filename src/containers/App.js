@@ -28,7 +28,6 @@ import {Map} from 'immutable';
 // const Login = require('./Login').default;
 // const Splash = require('../containers/Splash').default;
 const Tabbar = require('../components/Tabbar').default;
-import MapView from 'react-native-maps';
 
 /**
  * Project actions
@@ -134,16 +133,6 @@ let App = React.createClass({
   render () {
     let component = <View style={styles.container}>
       <Tabbar />
-    </View>
-    let mapview = <View style={styles.container}>
-      <MapView
-        initialRegion={{
-          latitude: 37.78825,
-          longitude: -122.4324,
-          latitudeDelta: 0.0922,
-          longitudeDelta: 0.0421,
-        }}
-      />
     </View>
     return (
       component
