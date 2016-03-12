@@ -1,5 +1,5 @@
 /**
- * # splashActions.js
+ * # itemActions.js
  *
  * The actions to support the splash screen
  */
@@ -10,9 +10,9 @@
  * The actions for splash screen
  */
 const {
-  GET_SPLASH_REQUEST,
-  GET_SPLASH_SUCCESS,
-  GET_SPLASH_FAILURE,
+  ADD_ITEM,
+  SET_VISIBILITY_FILTER,
+  TOGGLE_ITEM,
 
   SPLASH_WANT_REQUEST,
   SPLASH_WANT_SUCCESS,
@@ -30,110 +30,29 @@ const {
 const BackendFactory = require('../../lib/BackendFactory').default;
 const AppAuthToken = require('../../lib/AppAuthToken').default;
 
-/**
- * ## retreiving profile actions
- */
-export function getSRequest() {
-  return {
-    type: GET_PROFILE_REQUEST
-  };
+
+//1. Takes the text from AddTodo field and returns proper “Action” JSON to send to other components.
+export const addItem = (text) => {
+ return {
+ type: ‘ADD_ITEM’,
+ id: nextItemId++,
+ text,  //<--ES6. same as text:text, in ES5
+ completed: false //<-- initially this is set to false
+ }
 }
-export function getProfileSuccess(json) {
-  return {
-    type: GET_PROFILE_SUCCESS,
-    payload: json
-  };
+
+//2. Takes filter string and returns proper “Action” JSON object to send to other components.
+export const setVisibilityFilter = (filter) => {
+ return {
+ type: ‘SET_VISIBILITY_FILTER’,
+ filter
+ }
 }
-export function getProfileFailure(json) {
-  return {
-    type: GET_PROFILE_FAILURE,
-    payload: json
-  };
-}
-/**
- * ## State actions
- * controls which form is displayed to the user
- * as in login, register, logout or reset password
- */
-export function getProfile(sessionToken) {
-  return dispatch => {
-    dispatch(getProfileRequest());
-    //store or get a sessionToken
-    return new AppAuthToken().getSessionToken(sessionToken)
-      .then((token) => {
-        return BackendFactory(token).getProfile();
-      })
-      .then((json) => {
-          dispatch(getProfileSuccess(json));
-      })
-      .catch((error) => {
-        dispatch(getProfileFailure(error));
-      });
-  };
-}
-/**
- * ## State actions
- * controls which form is displayed to the user
- * as in login, register, logout or reset password
- */
-export function profileUpdateRequest() {
-  return {
-    type: PROFILE_UPDATE_REQUEST
-  };
-}
-export function profileUpdateSuccess() {
-  return {
-    type: PROFILE_UPDATE_SUCCESS
-  };
-}
-export function profileUpdateFailure(json) {
-  return {
-    type: PROFILE_UPDATE_FAILURE,
-    payload: json
-  };
-}
-/**
- * ## updateProfile
- * @param {string} userId -  objectId
- * @param {string} username - the users name
- * @param {string] email - user's email
- * @param {Object} sessionToken - the sessionToken from Parse.com
- *
- * The sessionToken is provided when Hot Loading.
- *
- * With the sessionToken, Parse.com is called with the data to update
- * If successful, get the profile so that the screen is updated with
- * the data as now persisted on Parse.com
- *
- */
-export function updateProfile(userId, username, email, sessionToken) {
-  return dispatch => {
-    dispatch(profileUpdateRequest());
-    return new AppAuthToken().getSessionToken(sessionToken)
-      .then((token) => {
-        return BackendFactory(token).updateProfile(userId,
-          {
-            username: username,
-            email: email
-          }
-        );
-      })
-      .then(() => {
-          dispatch(profileUpdateSuccess());
-          dispatch(getProfile());
-      })
-      .catch((error) => {
-        dispatch(profileUpdateFailure(error));
-      });
-  };
-}
-/**
- * ## onProfileFormFieldChange
- *
- */
-export function onProfileFormFieldChange(field,value) {
-  return {
-    type: ON_PROFILE_FORM_FIELD_CHANGE,
-    payload: {field: field, value: value}
-  };
+
+//3. Takes Todo item’s id and returns proper “Action” JSON object to send to other components.
+export const toggleTodo = (id) => {
+ return {
+ type: ‘TOGGLE_ITEM’,
+ id
+ }
 }
