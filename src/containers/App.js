@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { toggleItem } from '../actions'
+import { toggleItem } from '../reducers/item/itemActions'
 import ItemFeed from '../components/ItemFeed'
 
 const getVisibleItems = (items, filter) => {
