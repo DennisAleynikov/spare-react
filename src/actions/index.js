@@ -1,28 +1,3 @@
-/**
- * # itemActions.js
- *
- * The actions to support the splash screen
- */
-'use strict';
-/**
- * ## Imports
- *
- * The actions for items
- */
-const {
-  ADD_ITEM,
-  SET_VISIBILITY_FILTER,
-  TOGGLE_ITEM
-} = require('../../lib/constants').default;
-
-/**
- * BackendFactory - base class for server implementation
- * AppAuthToken for localStorage sessionToken access
- */
-const BackendFactory = require('../../lib/BackendFactory').default;
-const AppAuthToken = require('../../lib/AppAuthToken').default;
-
-
 //1. Takes the text from AddItem field and returns proper “Action” JSON to send to other components.
 export const addItem = (text) => {
  return {

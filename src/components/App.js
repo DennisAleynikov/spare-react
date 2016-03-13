@@ -5,8 +5,8 @@ import VisibleItemFeed from '../containers/VisibleItemFeed'
 
 const App = () => (
   <div>
-    <AddTodo />
-    <VisibleTodoList />
+    <AddItem />
+    <VisibleItemFeed />
     // <Footer />
   </div>
 )
