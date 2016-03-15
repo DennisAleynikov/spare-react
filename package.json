@@ -1,79 +1,49 @@
 {
-  "name": "spare",
-  "version": "0.0.9",
-  "private": true,
-  "jest": {
-    "scriptPreprocessor": "./node_modules/babel-jest",
-    "setupEnvScriptFile": "./node_modules/react-native/jestSupport/env.js",
-    "testPathIgnorePatterns": [
-      "/node_modules/"
-    ],
-    "testFileExtensions": [
-      "es6",
-      "js"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "es6"
-    ],
-    "unmockedModulePathPatterns": [
-      "promise",
-      "source-map",
-      "key-mirror",
-      "immutable",
-      "fetch",
-      "redux",
-      "redux-thunk",
-      "fbjs"
-    ],
-    "verbose": true,
-    "testPathDirs": [
-      "src/"
-    ]
+  "name": "Spare",
+  "version": "0.0.8",
+  "description": "Community tech sharing hub",
+  "repository": {
+    "type": "git",
+    "url": "http://git.aleynikov.me/spr/react.git"
   },
+  "license": "MIT",
+  "keywords": [
+    "mobile",
+    "native",
+    "javascript",
+    "react-native",
+    "starter-kit",
+    "webpack",
+    "babel",
+    "eslint",
+    "greenkeeper",
+    "es2015"
+  ],
   "scripts": {
-    "test": "rm -rf ./node_modules/jest-cli/.haste_cache && jest ",
-    "start": "react-native start",
-    "test:watch": "npm run test -- --watch",
-    "test-chrome": "node-debug --preload false --nodejs --harmony jest --runInBand",
-    "docs": "./node_modules/docker/docker -w -i src/ -o ../snowflake-pages "
+    "android-setup-port": "adb reverse tcp:8081 tcp:8080",
+    "bundle": "rnws bundle",
+    "test": "eslint src",
+    "start": "rnws start"
+  },
+  "engines": {
+    "node": ">=4",
+    "npm": ">=2 <4"
   },
   "dependencies": {
-    "apsl-react-native-button": "git+https://git@github.com/bartonhammond/react-native-button.git",
-    "immutable": "^3.7.5",
-    "key-mirror": "^1.0.1",
-    "parse-react": "^0.5.0",
-    "react-dom": "^0.14.7",
-    "react-native": "^0.17.0",
-    "react-native-button": "^1.3.1",
-    "react-native-gifted-spinner": "0.0.3",
-    "react-native-maps": "^0.2.3",
-    "react-native-modalbox": "^1.2.6",
-    "react-native-quick-actions": "^0.1.0",
-    "react-native-refreshable-listview": "^1.3.0",
-    "react-native-simple-store": "^0.1.0",
-    "react-native-simpledialog-android": "^1.0.2",
-    "react-native-swiper": "^1.4.3",
-    "react-native-tab-navigator": "^0.2.11",
-    "react-native-vector-icons": "^1.0.4",
-    "react-redux": "^3.1.0",
-    "redux": "^3.0.4",
-    "redux-thunk": "^1.0.0",
-    "regenerator": "^0.8.42",
-    "tcomb-form-native": "^0.3.0",
-    "underscore": "^1.8.3",
-    "validate.js": "^0.9.0"
+    "react-native": "^0.21.0"
   },
   "devDependencies": {
-    "babel-jest": "^6.0.1",
-    "docker": "^0.2.14",
-    "istanbul": "gotwarlost/istanbul#source-map",
-    "jest-cli": "^0.8.2",
-    "react": "^0.14.3",
-    "react-addons-test-utils": "^0.14.3",
-    "redux-devtools": "^3.0.1",
-    "redux-devtools-dock-monitor": "^1.0.1",
-    "redux-devtools-log-monitor": "^1.0.2"
+    "babel-core": "^6.3.17",
+    "babel-eslint": "^5.0.0-beta6",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-1": "^6.3.13",
+    "eslint": "~2.2.0",
+    "eslint-loader": "^1.1.1",
+    "eslint-plugin-react": "^4.0.0",
+    "react-native-webpack-server": "^0.8.3",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
   }
 }
